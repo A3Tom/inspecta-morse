@@ -1,0 +1,166 @@
+{
+    "": {
+        "Left": "E",
+        "Right": "T"
+    },
+    "E": {
+        "Left": "I",
+        "Right": "A"
+    },
+    "T": {
+        "Left": "N",
+        "Right": "M"
+    },
+    "I": {
+        "Left": "S",
+        "Right": "U"
+    },
+    "A": {
+        "Left": "R",
+        "Right": "W"
+    },
+    "N": {
+        "Left": "D",
+        "Right": "K"
+    },
+    "M": {
+        "Left": "G",
+        "Right": "O"
+    },
+    "S": {
+        "Left": "H",
+        "Right": "V"
+    },
+    "U": {
+        "Left": "F",
+        "Right": "Ü"
+    },
+    "R": {
+        "Left": "L",
+        "Right": "Ä"
+    },
+    "W": {
+        "Left": "P",
+        "Right": "J"
+    },
+    "D": {
+        "Left": "B",
+        "Right": "X"
+    },
+    "K": {
+        "Left": "C",
+        "Right": "Y"
+    },
+    "G": {
+        "Left": "Z",
+        "Right": "Q"
+    },
+    "O": {
+        "Left": "Ö",
+        "Right": "CH"
+    },
+    "V": {
+        "Left": "Ŝ",
+        "Right": "3"
+    },
+    "F": {
+        "Left": "É",
+        "Right": "¿"
+    },
+    "Ü": {
+        "Left": "Ð",
+        "Right": "2"
+    },
+    "L": {
+        "Left": "AS",
+        "Right": "È"
+    },
+    "Ä": {
+        "Left": "+",
+        "Right": ""
+    },
+    "P": {
+        "Left": "Þ",
+        "Right": "À"
+    },
+    "J": {
+        "Left": "Ĵ",
+        "Right": "1"
+    },
+    "B": {
+        "Left": "6",
+        "Right": "="
+    },
+    "X": {
+        "Left": "/",
+        "Right": ""
+    },
+    "C": {
+        "Left": "Ç",
+        "Right": "KA"
+    },
+    "Y": {
+        "Left": "(",
+        "Right": ""
+    },
+    "Z": {
+        "Left": "7",
+        "Right": "Ž"
+    },
+    "Q": {
+        "Left": "Ĝ",
+        "Right": "Ñ"
+    },
+    "Ö": {
+        "Left": "8",
+        "Right": ""
+    },
+    "CH": {
+        "Left": "9",
+        "Right": "0"
+    },
+    "Ŝ": {
+        "Left": "",
+        "Right": "SK"
+    },
+    "Ð": {
+        "Left": "?",
+        "Right": "_"
+    },
+    "È": {
+        "Left": "''",
+        "Right": ""
+    },
+    "+": {
+        "Left": ".",
+        "Right": ""
+    },
+    "À": {
+        "Left": "@",
+        "Right": ""
+    },
+    "1": {
+        "Left": "'",
+        "Right": ""
+    },
+    "6": {
+        "Left": "",
+        "Right": "-"
+    },
+    "KA": {
+        "Left": ";",
+        "Right": "!"
+    },
+    "(": {
+        "Left": "",
+        "Right": ")"
+    },
+    "Ž": {
+        "Left": "Ź",
+        "Right": ","
+    },
+    "8": {
+        "Left": ":",
+        "Right": ""
+    }
+}
