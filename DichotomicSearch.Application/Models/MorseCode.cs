@@ -4,9 +4,9 @@ public class MorseCode
 {
     public class Symbols
     {
-        public const string DOT_SYMBOL = ".";
-        public const string DASH_SYMBOL = "-";
-        public const string UNKNOWN_SYMBOL = "?";
+        public const char DOT_SYMBOL = '.';
+        public const char DASH_SYMBOL = '-';
+        public const char UNKNOWN_SYMBOL = '?';
     }
 
     public static HashSet<Node> Tree =>
