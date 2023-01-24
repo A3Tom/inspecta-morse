@@ -1,166 +1,207 @@
-{
-    "": {
+[
+    {
+        "Parent": "",
         "Left": "E",
         "Right": "T"
     },
-    "E": {
+    {
+        "Parent": "E",
         "Left": "I",
         "Right": "A"
     },
-    "T": {
+    {
+        "Parent": "T",
         "Left": "N",
         "Right": "M"
     },
-    "I": {
+    {
+        "Parent": "I",
         "Left": "S",
         "Right": "U"
     },
-    "A": {
+    {
+        "Parent": "A",
         "Left": "R",
         "Right": "W"
     },
-    "N": {
+    {
+        "Parent": "N",
         "Left": "D",
         "Right": "K"
     },
-    "M": {
+    {
+        "Parent": "M",
         "Left": "G",
         "Right": "O"
     },
-    "S": {
+    {
+        "Parent": "S",
         "Left": "H",
         "Right": "V"
     },
-    "U": {
+    {
+        "Parent": "U",
         "Left": "F",
         "Right": "Ü"
     },
-    "R": {
+    {
+        "Parent": "R",
         "Left": "L",
         "Right": "Ä"
     },
-    "W": {
+    {
+        "Parent": "W",
         "Left": "P",
         "Right": "J"
     },
-    "D": {
+    {
+        "Parent": "D",
         "Left": "B",
         "Right": "X"
     },
-    "K": {
+    {
+        "Parent": "K",
         "Left": "C",
         "Right": "Y"
     },
-    "G": {
+    {
+        "Parent": "G",
         "Left": "Z",
         "Right": "Q"
     },
-    "O": {
+    {
+        "Parent": "O",
         "Left": "Ö",
         "Right": "CH"
     },
-    "V": {
+    {
+        "Parent": "V",
         "Left": "Ŝ",
         "Right": "3"
     },
-    "F": {
+    {
+        "Parent": "F",
         "Left": "É",
         "Right": "¿"
     },
-    "Ü": {
+    {
+        "Parent": "Ü",
         "Left": "Ð",
         "Right": "2"
     },
-    "L": {
+    {
+        "Parent": "L",
         "Left": "AS",
         "Right": "È"
     },
-    "Ä": {
+    {
+        "Parent": "Ä",
         "Left": "+",
         "Right": ""
     },
-    "P": {
+    {
+        "Parent": "P",
         "Left": "Þ",
         "Right": "À"
     },
-    "J": {
+    {
+        "Parent": "J",
         "Left": "Ĵ",
         "Right": "1"
     },
-    "B": {
+    {
+        "Parent": "B",
         "Left": "6",
         "Right": "="
     },
-    "X": {
+    {
+        "Parent": "X",
         "Left": "/",
         "Right": ""
     },
-    "C": {
+    {
+        "Parent": "C",
         "Left": "Ç",
         "Right": "KA"
     },
-    "Y": {
+    {
+        "Parent": "Y",
         "Left": "(",
         "Right": ""
     },
-    "Z": {
+    {
+        "Parent": "Z",
         "Left": "7",
         "Right": "Ž"
     },
-    "Q": {
+    {
+        "Parent": "Q",
         "Left": "Ĝ",
         "Right": "Ñ"
     },
-    "Ö": {
+    {
+        "Parent": "Ö",
         "Left": "8",
         "Right": ""
     },
-    "CH": {
+    {
+        "Parent": "CH",
         "Left": "9",
         "Right": "0"
     },
-    "Ŝ": {
+    {
+        "Parent": "Ŝ",
         "Left": "",
         "Right": "SK"
     },
-    "Ð": {
+    {
+        "Parent": "Ð",
         "Left": "?",
         "Right": "_"
     },
-    "È": {
-        "Left": "''",
+    {
+        "Parent": "È",
+        "Left": "\"",
         "Right": ""
     },
-    "+": {
+    {
+        "Parent": "+",
         "Left": ".",
         "Right": ""
     },
-    "À": {
+    {
+        "Parent": "À",
         "Left": "@",
         "Right": ""
     },
-    "1": {
+    {
+        "Parent": "1",
         "Left": "'",
         "Right": ""
     },
-    "6": {
+    {
+        "Parent": "6",
         "Left": "",
         "Right": "-"
     },
-    "KA": {
+    {
+        "Parent": "KA",
         "Left": ";",
         "Right": "!"
     },
-    "(": {
+    {
+        "Parent": "(",
         "Left": "",
         "Right": ")"
     },
-    "Ž": {
+    {
+        "Parent": "Ž",
         "Left": "Ź",
         "Right": ","
     },
-    "8": {
+    {
+        "Parent": "8",
         "Left": ":",
         "Right": ""
     }
-}
+]
