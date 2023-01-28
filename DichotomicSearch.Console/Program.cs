@@ -5,9 +5,7 @@ using System.Text;
 using System.Text.Json;
 
 const string ROOT_DIR_NAME = "dichotomic-search";
-const string MORSE_CODE_TREE_RELATIVE_PATH = @"resources/morse-coded-tree.json";
-
-Console.WriteLine("Hello, World!");
+const string MORSE_CODE_TREE_RELATIVE_PATH = @"resources/morse-code-tree.json";
 
 var fileName = GetFilePath();
 
