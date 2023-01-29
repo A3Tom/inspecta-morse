@@ -1,27 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-using DichotomicSearch.Application.Models;
-using System.Reflection;
-using System.Text;
-using System.Text.Json;
+﻿using DichotomicSearch.Application.Classes;
 
-const string ROOT_DIR_NAME = "dichotomic-search";
-const string MORSE_CODE_TREE_RELATIVE_PATH = @"resources/morse-code-tree.json";
-
-var fileName = GetFilePath();
-
-string jsonString = File.ReadAllText(fileName, Encoding.UTF8);
-var morseCodeTree = JsonSerializer.Deserialize<HashSet<Node>>(jsonString)!;
-
-foreach (var node in morseCodeTree)
-    Console.WriteLine($"[{node.Parent}] : {node.Left} | {node.Right}");
-
+var morseCodeNodes = MorseCodeTreeBuilder.LoadFileFromRelativePath();
 Console.WriteLine("Loaded morse code tree!");
 
+var _searchService = new SearchService(morseCodeNodes);
 
+FormatOutput(".-.");
+FormatOutput(".");
+FormatOutput("--");
+FormatOutput("---");
 
-static string GetFilePath()
-{
-    var runLocation = Assembly.GetExecutingAssembly().Location;
-    var folderLocationIdx = runLocation.IndexOf(ROOT_DIR_NAME);
-    return $"{runLocation[..(folderLocationIdx + ROOT_DIR_NAME.Length)]}/{MORSE_CODE_TREE_RELATIVE_PATH}";
-}
+void FormatOutput(string input) =>
+    Console.WriteLine("[{0}] {1}",
+        input,
+        string.Join(' ', _searchService.TransformSymbolsToNodes(input))
+    );
