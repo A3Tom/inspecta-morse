@@ -30,7 +30,53 @@ public class SearchService
             previousNodePossibilities = currentNodePossibilities.ToArray();
         }
 
-        return previousNodePossibilities.ToArray();
+        return previousNodePossibilities;
+    }
+
+    public string TransformNodeToSymbol(char node)
+    {
+        if (node == ' ')
+            return " ";
+
+        var searchNode = node.ToString().ToUpper();
+        string result = "";
+
+        while (!string.IsNullOrEmpty(searchNode))
+        {
+            Node? currentNode = null;
+
+            currentNode = _morseCodeNodes.FirstOrDefault(x => x.Left == searchNode || x.Right == searchNode);
+            if (currentNode != null)
+            {
+                result += currentNode.Left == searchNode ? 
+                    MorseCode.Symbols.DOT_SYMBOL :
+                    MorseCode.Symbols.DASH_SYMBOL;
+
+                searchNode = currentNode.Parent; 
+                continue;
+            }
+
+            searchNode = string.Empty;
+        }
+
+        return result;
+    }
+
+    private string BuildNodeSymbolsRecursive(string result, string? searchNode)
+    {
+        if (string.IsNullOrEmpty(searchNode))
+            return result;
+
+        var foundNode = _morseCodeNodes.FirstOrDefault(x => x.Left == searchNode || x.Right == searchNode);
+
+        if (foundNode == null)
+            return result;
+
+        result += foundNode.Left == searchNode ?
+            MorseCode.Symbols.DOT_SYMBOL :
+            MorseCode.Symbols.DASH_SYMBOL;
+
+        return BuildNodeSymbolsRecursive(result, foundNode.Parent);
     }
 
     private static bool IsDotOrUnkown(char signal) =>
