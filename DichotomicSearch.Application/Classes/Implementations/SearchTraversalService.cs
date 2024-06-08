@@ -46,7 +46,7 @@ public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversal
 
         result = result.Insert(0, morseSymbol.ToString());
 
-        return BuildNodeSymbolsRecursive(result, foundNode.Parent);
+        return BuildNodeSymbolsRecursive(result, foundNode.Key);
     }
 
     private static bool IsDotOrUnkown(char signal) =>
@@ -61,5 +61,5 @@ public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversal
         !string.IsNullOrEmpty(destination);
 
     private static IEnumerable<Node> GetValidNodes(ICollection<Node> morseCodeTree, string[] parents) =>
-        morseCodeTree.Where(x => parents.Contains(x.Parent));
+        morseCodeTree.Where(x => parents.Contains(x.Key));
 }

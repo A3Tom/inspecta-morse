@@ -18,7 +18,7 @@ public class DirectiveTraversalService(ICollection<Node> treeNodes) : NodeTraver
             };
         }
 
-        return [ currentNode.Parent! ];
+        return [ currentNode.Key! ];
     }
 
     public string TransformNodeToSymbol(char node) => BuildNodeSymbols(string.Empty, node.ToString().ToUpper());
@@ -37,9 +37,9 @@ public class DirectiveTraversalService(ICollection<Node> treeNodes) : NodeTraver
 
         result = result.Insert(0, huffmanCode.ToString());
 
-        return BuildNodeSymbols(result, foundNode.Parent);
+        return BuildNodeSymbols(result, foundNode.Key);
     }
 
-    private Node GetLeftNode(Node parentNode) => _treeNodes.First(x => x.Parent == parentNode.Left);
-    private Node GetRightNode(Node parentNode) => _treeNodes.First(x => x.Parent == parentNode.Right);
+    private Node GetLeftNode(Node parentNode) => _treeNodes.First(x => x.Key == parentNode.Left);
+    private Node GetRightNode(Node parentNode) => _treeNodes.First(x => x.Key == parentNode.Right);
 }

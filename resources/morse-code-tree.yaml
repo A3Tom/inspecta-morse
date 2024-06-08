@@ -1,126 +1,126 @@
-- Parent: ''
+- Key: ''
   Left: E
   Right: T
-- Parent: E
+- Key: E
   Left: I
   Right: A
-- Parent: T
+- Key: T
   Left: N
   Right: M
-- Parent: I
+- Key: I
   Left: S
   Right: U
-- Parent: A
+- Key: A
   Left: R
   Right: W
-- Parent: N
+- Key: N
   Left: D
   Right: K
-- Parent: M
+- Key: M
   Left: G
   Right: O
-- Parent: S
+- Key: S
   Left: H
   Right: V
-- Parent: U
+- Key: U
   Left: F
   Right: Ü
-- Parent: R
+- Key: R
   Left: L
   Right: Ä
-- Parent: W
+- Key: W
   Left: P
   Right: J
-- Parent: D
+- Key: D
   Left: B
   Right: X
-- Parent: K
+- Key: K
   Left: C
   Right: Y
-- Parent: G
+- Key: G
   Left: Z
   Right: Q
-- Parent: O
+- Key: O
   Left: Ö
   Right: CH
-- Parent: H
+- Key: H
   Left: 5
   Right: 4
-- Parent: V
+- Key: V
   Left: Ŝ
   Right: 3
-- Parent: F
+- Key: F
   Left: É
   Right: ¿
-- Parent: Ü
+- Key: Ü
   Left: Ð
   Right: 2
-- Parent: L
+- Key: L
   Left: AS
   Right: È
-- Parent: Ä
+- Key: Ä
   Left: +
   Right: ''
-- Parent: P
+- Key: P
   Left: Þ
   Right: À
-- Parent: J
+- Key: J
   Left: Ĵ
   Right: 1
-- Parent: B
+- Key: B
   Left: 6
   Right: =
-- Parent: X
+- Key: X
   Left: /
   Right: ''
-- Parent: C
+- Key: C
   Left: Ç
   Right: KA
-- Parent: Y
+- Key: Y
   Left: (
   Right: ''
-- Parent: Z
+- Key: Z
   Left: 7
   Right: Ž
-- Parent: Q
+- Key: Q
   Left: Ĝ
   Right: Ñ
-- Parent: Ö
+- Key: Ö
   Left: 8
   Right: ''
-- Parent: CH
+- Key: CH
   Left: 9
   Right: 0
-- Parent: Ŝ
+- Key: Ŝ
   Left: ''
   Right: SK
-- Parent: Ð
+- Key: Ð
   Left: '?'
   Right: _
-- Parent: È
+- Key: È
   Left: '"'
   Right: ''
-- Parent: +
+- Key: +
   Left: .
   Right: ''
-- Parent: À
+- Key: À
   Left: '@'
   Right: ''
-- Parent: 1
+- Key: 1
   Left: "'"
   Right: ''
-- Parent: 6
+- Key: 6
   Left: ''
   Right: '-'
-- Parent: KA
+- Key: KA
   Left: ;
   Right: '!'
-- Parent: (
+- Key: (
   Left: ''
   Right: )
-- Parent: Ž
+- Key: Ž
   Left: Ź
   Right: ','
-- Parent: 8
+- Key: 8
   Left: ':'
   Right: ''
