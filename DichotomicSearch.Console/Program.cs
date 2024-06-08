@@ -1,9 +1,10 @@
 ﻿using DichotomicSearch.Application.Classes;
+using DichotomicSearch.Application.Classes.Implementations;
 
-var morseCodeNodes = MorseCodeTreeBuilder.LoadFileFromRelativePath();
+var morseCodeNodes = NodeTreeBuilder.LoadFileFromRelativePath();
 Console.WriteLine("Loaded morse code tree!");
 
-var _searchService = new SearchService(morseCodeNodes);
+var _searchService = new SearchTraversalService(morseCodeNodes);
 
 FormatMorseOutput(".-.");
 FormatMorseOutput(".");
@@ -26,7 +27,7 @@ while(!string.IsNullOrEmpty(userInput))
     }
     else
     {
-        var morseOutput = userInput.Select(x => _searchService.TransformNodeToSymbol(x)).ToList();
+        var morseOutput = userInput.Select(_searchService.TransformNodeToSymbol).ToList();
 
         Console.WriteLine($"[{userInput}] {string.Join(" ", morseOutput)}");
     }

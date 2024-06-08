@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.Json;
 
 namespace DichotomicSearch.Application.Classes;
-public class MorseCodeTreeBuilder
+public class NodeTreeBuilder
 {
     // Well ain't this specific ...
     public static HashSet<Node> LoadFileFromRelativePath()
