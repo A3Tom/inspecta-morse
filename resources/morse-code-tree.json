@@ -75,6 +75,11 @@
         "Right": "CH"
     },
     {
+        "Parent": "H",
+        "Left": "5",
+        "Right": "4"
+    },
+    {
         "Parent": "V",
         "Left": "Ŝ",
         "Right": "3"
