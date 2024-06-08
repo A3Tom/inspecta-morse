@@ -41,8 +41,8 @@ public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversal
             return result;
 
         var morseSymbol = foundNode.Left == searchNode ?
-            MorseCode.Symbols.DOT_SYMBOL :
-            MorseCode.Symbols.DASH_SYMBOL;
+            MorseCodeSymbols.DOT_SYMBOL :
+            MorseCodeSymbols.DASH_SYMBOL;
 
         result = result.Insert(0, morseSymbol.ToString());
 
@@ -50,12 +50,12 @@ public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversal
     }
 
     private static bool IsDotOrUnkown(char signal) =>
-        signal == MorseCode.Symbols.DOT_SYMBOL ||
-        signal == MorseCode.Symbols.UNKNOWN_SYMBOL;
+        signal == MorseCodeSymbols.DOT_SYMBOL ||
+        signal == MorseCodeSymbols.UNKNOWN_SYMBOL;
 
     private static bool IsDashOrUnkown(char signal) =>
-        signal == MorseCode.Symbols.DASH_SYMBOL ||
-        signal == MorseCode.Symbols.UNKNOWN_SYMBOL;
+        signal == MorseCodeSymbols.DASH_SYMBOL ||
+        signal == MorseCodeSymbols.UNKNOWN_SYMBOL;
 
     private static bool DestinationNodeIsNotEmpty(string? destination) =>
         !string.IsNullOrEmpty(destination);
