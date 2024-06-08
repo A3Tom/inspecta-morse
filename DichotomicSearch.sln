@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DichotomicSearch.Console", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DichotomicSearch.Application", "DichotomicSearch.Application\DichotomicSearch.Application.csproj", "{0CEE4E9C-FA27-4808-8826-55E58C64A636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DichotomicSearch.Tests", "DichotomicSearch.Tests\DichotomicSearch.Tests.csproj", "{4DC75D3B-1AB1-40FF-B0D2-601CB1B92FA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DichotomicSearch.Tests", "DichotomicSearch.Tests\DichotomicSearch.Tests.csproj", "{4DC75D3B-1AB1-40FF-B0D2-601CB1B92FA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
