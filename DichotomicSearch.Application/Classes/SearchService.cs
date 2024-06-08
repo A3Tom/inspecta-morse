@@ -33,34 +33,10 @@ public class SearchService
         return previousNodePossibilities;
     }
 
-    public string TransformNodeToSymbol(char node)
-    {
-        if (node == ' ')
-            return " ";
-
-        var searchNode = node.ToString().ToUpper();
-        string result = "";
-
-        while (!string.IsNullOrEmpty(searchNode))
-        {
-            Node? currentNode = null;
-
-            currentNode = _morseCodeNodes.FirstOrDefault(x => x.Left == searchNode || x.Right == searchNode);
-            if (currentNode != null)
-            {
-                result += currentNode.Left == searchNode ? 
-                    MorseCode.Symbols.DOT_SYMBOL :
-                    MorseCode.Symbols.DASH_SYMBOL;
-
-                searchNode = currentNode.Parent; 
-                continue;
-            }
-
-            searchNode = string.Empty;
-        }
-
-        return result;
-    }
+    public string TransformNodeToSymbol(char node) => 
+        node == ' ' ?
+            " " :
+            BuildNodeSymbolsRecursive("", node.ToString().ToUpper());
 
     private string BuildNodeSymbolsRecursive(string result, string? searchNode)
     {
@@ -72,9 +48,11 @@ public class SearchService
         if (foundNode == null)
             return result;
 
-        result += foundNode.Left == searchNode ?
+        var morseSymbol = foundNode.Left == searchNode ?
             MorseCode.Symbols.DOT_SYMBOL :
             MorseCode.Symbols.DASH_SYMBOL;
+
+        result = result.Insert(0, morseSymbol.ToString());
 
         return BuildNodeSymbolsRecursive(result, foundNode.Parent);
     }
