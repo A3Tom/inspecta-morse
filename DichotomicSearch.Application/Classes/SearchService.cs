@@ -27,7 +27,7 @@ public class SearchService
                 if (DestinationNodeIsNotEmpty(node.Right) && IsDashOrUnkown(signals[i]))
                     currentNodePossibilities.Add(node.Right!);
             }
-            previousNodePossibilities = currentNodePossibilities.ToArray();
+            previousNodePossibilities = [.. currentNodePossibilities];
         }
 
         return previousNodePossibilities;
