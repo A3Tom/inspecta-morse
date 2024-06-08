@@ -1,13 +1,14 @@
 ﻿using DichotomicSearch.Application;
 using DichotomicSearch.Application.Classes;
 using DichotomicSearch.Application.Classes.Implementations;
+using DichotomicSearch.Application.Models;
 
 namespace dichotomic_search;
 public class MorseCodeProgram
 {
     public static void Run()
     {
-        var morseCodeNodes = NodeTreeBuilder.LoadJsonFileFromRelativePath(Settings.MORSE_CODE_TREE_RELATIVE_PATH);
+        var morseCodeNodes = NodeTreeBuilder.LoadFileFromRelativePath(Settings.MORSE_CODE_TREE_RELATIVE_PATH, FileType.YAML);
         Console.WriteLine("Loaded morse code tree!");
 
         var _searchService = new SearchTraversalService(morseCodeNodes);

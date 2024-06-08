@@ -7,9 +7,14 @@ using YamlDotNet.Serialization;
 namespace DichotomicSearch.Application.Classes;
 public class NodeTreeBuilder
 {
-    public static HashSet<Node> LoadYamlFileFromRelativePath(string relativePath)
+    public static HashSet<Node> LoadFileFromRelativePath(string relativePath, FileType fileType)
+        => fileType == FileType.JSON ?
+            LoadJsonFileFromRelativePath(relativePath) :
+            LoadYamlFileFromRelativePath(relativePath);
+
+    private static HashSet<Node> LoadYamlFileFromRelativePath(string relativePath)
     {
-        var fullFilePath = $"{GetBaseFilePath()}/{relativePath}";
+        var fullFilePath = $"{GetBaseFilePath()}/{relativePath}.yaml";
         
         string yamlString = File.ReadAllText(fullFilePath, Encoding.UTF8);
         var yamlDeserializer = new DeserializerBuilder().Build();
@@ -26,9 +31,9 @@ public class NodeTreeBuilder
         File.AppendAllText(filepath, outputYaml);
     }
 
-    public static HashSet<Node> LoadJsonFileFromRelativePath(string relativePath)
+    private static HashSet<Node> LoadJsonFileFromRelativePath(string relativePath)
     {
-        var fileName = $"{GetBaseFilePath()}/{relativePath}";
+        var fileName = $"{GetBaseFilePath()}/{relativePath}.json";
 
         string jsonString = File.ReadAllText(fileName, Encoding.UTF8);
         return JsonSerializer.Deserialize<HashSet<Node>>(jsonString)!;
