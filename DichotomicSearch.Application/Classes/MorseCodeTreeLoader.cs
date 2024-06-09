@@ -28,6 +28,7 @@ public class NodeTreeBuilder
         var outputYaml = yamlSerializer.Serialize(nodes);
 
         var filepath = $"{GetBaseFilePath()}/{filename}.yaml";
+        File.Delete(filepath);
         File.AppendAllText(filepath, outputYaml);
     }
 
