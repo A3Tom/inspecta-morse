@@ -28,7 +28,7 @@ public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversal
         return previousNodePossibilities;
     }
 
-    public string TransformNodeToSymbol(char node) => node == ' ' ? " " : BuildNodeSymbolsRecursive("", node.ToString().ToUpper());
+    public string TransformNodeToSymbol(string node) => node == " " ? " " : BuildNodeSymbolsRecursive("", node.ToString().ToUpper());
 
     private string BuildNodeSymbolsRecursive(string result, string? searchNode)
     {

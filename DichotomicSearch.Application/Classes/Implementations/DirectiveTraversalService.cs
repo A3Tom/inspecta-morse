@@ -21,7 +21,7 @@ public class DirectiveTraversalService(ICollection<Node> treeNodes) : NodeTraver
         return [ currentNode.Key! ];
     }
 
-    public string TransformNodeToSymbol(char node) => BuildNodeSymbols(string.Empty, node.ToString().ToUpper());
+    public string TransformNodeToSymbol(string node) => BuildNodeSymbols(string.Empty, node);
 
     private string BuildNodeSymbols(string result, string? searchNode)
     {
