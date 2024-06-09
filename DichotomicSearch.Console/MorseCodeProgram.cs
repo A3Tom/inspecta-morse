@@ -34,7 +34,7 @@ public class MorseCodeProgram
             }
             else
             {
-                var morseOutput = userInput.Select(_searchService.TransformNodeToSymbol).ToList();
+                var morseOutput = userInput.Select(x => _searchService.TransformNodeToSymbol(x.ToString())).ToList();
 
                 Console.WriteLine($"[{userInput}] {string.Join(" ", morseOutput)}");
             }

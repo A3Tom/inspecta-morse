@@ -1,3 +1,5 @@
 ﻿using dichotomic_search;
 
-MorseCodeProgram.Run();
+//MorseCodeProgram.Run();
+
+HuffmanEncodingProgram.Run();
