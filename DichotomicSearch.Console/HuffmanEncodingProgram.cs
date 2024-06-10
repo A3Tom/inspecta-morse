@@ -1,25 +1,38 @@
-﻿using DichotomicSearch.Application.Classes;
-using DichotomicSearch.Application;
+﻿using DichotomicSearch.Application.Classes.Implementations;
 using DichotomicSearch.Application.Models;
-using DichotomicSearch.Application.Classes.Implementations;
 
 namespace dichotomic_search;
 public class HuffmanEncodingProgram
 {
     public static void Run()
     {
-        var exampleText = "eerrtawdggg0987 awdawd 55123 ffa asdwd 3r3 e44444 12 af afafwaww awdawd ";
+        var exampleText = "eee11eeh51h524uu88toooiocca~-11f1f";
         var nodeTree = BuildLeafNodes(exampleText);
 
         var hoffmanTree = BuildHuffmanTree(nodeTree);
         //var nodeTree = NodeTreeBuilder.LoadFileFromRelativePath(Settings.TEST_HUFFMAN_TREE_RELATIVE_PATH, FileType.YAML);
         var traversalService = new DirectiveTraversalService(hoffmanTree);
 
-        var encoding = hoffmanTree.Select(x => traversalService.TransformNodeToSymbol(x.Key!)).ToList();
+        var leafNodes = BuildLeafNodes(exampleText);
 
+        var encodingDict = leafNodes
+            .ToDictionary(
+                k => k.Key!,
+                v => traversalService.TransformNodeToSymbol(v.Key!)
+            );
+
+        foreach (var encodingKey in encodingDict.OrderBy(x => x.Value.Length))
+            Console.WriteLine($"[{encodingKey.Key}] {encodingKey.Value}");
+
+        var encoding = exampleText.Select(x => encodingDict[x.ToString()]);
         var encodedString = string.Join("", encoding);
-        Console.WriteLine($"Example text bytes : {exampleText.Length * 8}");
-        Console.WriteLine($"Huffman Encoded text bytes : {encodedString.Length}");
+
+        Console.WriteLine($"Original string: {exampleText}");
+        Console.WriteLine($"Encoded string: {encodedString}");
+
+        Console.WriteLine("Stats:\n");
+        Console.WriteLine($"Example text bits : {exampleText.Length * 8}");
+        Console.WriteLine($"Huffman Encoded text bits : {encodedString.Length}");
 
         decimal compressionRatio = GetCompressionRatio(exampleText, encodedString);
         decimal spaceSavedPct = GetSpaceSavedPercentage(exampleText, encodedString);
