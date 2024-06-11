@@ -25,11 +25,29 @@ public class COMPortKeyer
                 if (incoming.StartsWith("Morse Message : "))
                 {
                     var colonidx = incoming.IndexOf(":") + 1;
-                    var morseCode = incoming.Replace("\r", "")[colonidx..].Trim();
-                    var output = _morseSearchService.TransformSymbolsToNodes(morseCode);
-                    Console.WriteLine($"Morse : {morseCode} | Translated : {string.Join("", output)}");
+                    var morseCode = incoming.Replace("\r", "")[colonidx..].Trim().Replace("_", " ");
+                    var translation = TranslateSentence(morseCode);
+
+                    Console.WriteLine($"Input: \n{morseCode} \nTranslated : \n{string.Join(" ", translation)}\n");
                 }
             }
         }
     }
+
+    private static string TranslateSentence(string morseCode) => 
+        string.Join(
+            " ",
+            morseCode.Split('/')
+                .Select(TranslateWord)
+                .ToList()
+        );
+
+    private static string TranslateWord(string word) => 
+        string.Join(
+            "", 
+            word.Split(" ")
+                .Select(x => _morseSearchService.TransformSymbolsToNodes(x).FirstOrDefault() ?? "")
+                .Where(x => !string.IsNullOrEmpty(x))
+                .ToList()
+        );
 }
