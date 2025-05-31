@@ -18,9 +18,13 @@ bool insertSpace = false;
 bool insertNextChar = false;
 
 String outputText = "";
+String inputBuffer = "";
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
+  Serial.println("ESP32-MORSE-001");
+
   pinMode(led_red, OUTPUT);
   pinMode(led_blue, OUTPUT);
   pinMode(led_yellow, OUTPUT);
@@ -28,19 +32,32 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 }
 
-void loop() {
+// Ano a need to tidy all this up, that's the next task
+void loop()
+{
+  while (Serial.available() > 0) {
+    char incomingChar = Serial.read();
+
+    if (incomingChar == '\n') {
+      handleSerialCommand(inputBuffer);
+      inputBuffer = "";
+    } else {
+      inputBuffer += incomingChar;
+    }
+  }
+
   currentState = digitalRead(BUTTON_PIN);
 
-  if(currentState == HIGH)
+  if (currentState == HIGH)
   {
-    if(lastState == LOW)
+    if (lastState == LOW)
     {
       Serial.println("key pressed down");
       pressStart = millis();
       lastState = currentState;
     }
-    
-    if(millis() - pressStart > dit_threshold * 2.5)
+
+    if (millis() - pressStart > dit_threshold * 2.5)
     {
       digitalWrite(led_green, HIGH);
       digitalWrite(led_yellow, LOW);
@@ -63,15 +80,15 @@ void loop() {
   }
   else
   {
-    if(lastState == HIGH)
+    if (lastState == HIGH)
     {
       long duration = millis() - pressStart;
       if (insertNextChar)
         outputText += "_";
 
-      if(insertSpace)
+      if (insertSpace)
         outputText += "/";
-      else if(duration <= dit_threshold)
+      else if (duration <= dit_threshold)
         outputText += ".";
       else
         outputText += "-";
@@ -88,7 +105,7 @@ void loop() {
     digitalWrite(led_blue, LOW);
     digitalWrite(led_yellow, LOW);
 
-    if(insertNextChar)
+    if (insertNextChar)
       digitalWrite(led_green, HIGH);
     else
       digitalWrite(led_green, LOW);
@@ -98,15 +115,15 @@ void loop() {
   {
     insertNextChar = true;
   }
-  if(lastAction != 0 && millis() - lastAction > space_threshold * 3)
+  if (lastAction != 0 && millis() - lastAction > space_threshold * 3)
   {
     insertNextChar = false;
 
     Serial.print("Morse Message : ");
     Serial.println(outputText);
-    //char buffer[4096];
-    //sprintf(buffer, "Morse Message : %s", outputText);
-    //Serial.println(buffer);
+    // char buffer[4096];
+    // sprintf(buffer, "Morse Message : %s", outputText);
+    // Serial.println(buffer);
     outputText = "";
 
     send_led_show();
@@ -115,11 +132,10 @@ void loop() {
   }
 }
 
-
 void send_led_show()
 {
   int lightDelay = 75;
-  
+
   all_leds_low();
   delay(lightDelay);
 
@@ -142,4 +158,16 @@ void all_leds_low()
   digitalWrite(led_blue, LOW);
   digitalWrite(led_yellow, LOW);
   digitalWrite(led_green, LOW);
+}
+
+void handleSerialCommand(String message) {
+  message.trim();
+  Serial.print("Yeev chanted: ");
+  Serial.println(message);
+
+  if (message == "POPE") {
+    Serial.println("RIP Franco, you legend");
+  } else if (message == "STATUS") {
+    Serial.println("Yer sound");
+  }
 }
