@@ -1,6 +1,6 @@
-﻿using DichotomicSearch.Application.Models;
+﻿using InspectaMorse.Application.Models;
 
-namespace DichotomicSearch.Application.Classes.Implementations.Abstract;
+namespace InspectaMorse.Application.Classes.Implementations.Abstract;
 
 public abstract class NodeTraversalSolver(ICollection<Node> treeNodes)
 {

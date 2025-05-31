@@ -1,10 +1,11 @@
-﻿using DichotomicSearch.Application.Classes.Implementations;
-using DichotomicSearch.Application.Classes;
-using DichotomicSearch.Application.Models;
-using System.IO.Ports;
-using DichotomicSearch.Application;
+﻿using System.IO.Ports;
+using InspectaMorse.Application.Models;
+using InspectaMorse.Application;
+using InspectaMorse.Application.Classes;
+using InspectaMorse.Application.Classes.Implementations;
 
-namespace dichotomic_search;
+namespace InspectaMorse.TUI;
+
 public class COMPortKeyer
 {
     private static readonly HashSet<Node> _morseCodeNodes = NodeTreeBuilder.LoadFileFromRelativePath(Settings.MORSE_CODE_TREE_RELATIVE_PATH, FileType.YAML);
@@ -34,7 +35,7 @@ public class COMPortKeyer
         }
     }
 
-    private static string TranslateSentence(string morseCode) => 
+    private static string TranslateSentence(string morseCode) =>
         string.Join(
             " ",
             morseCode.Split('/')
@@ -42,9 +43,9 @@ public class COMPortKeyer
                 .ToList()
         );
 
-    private static string TranslateWord(string word) => 
+    private static string TranslateWord(string word) =>
         string.Join(
-            "", 
+            "",
             word.Split(" ")
                 .Select(x => _morseSearchService.TransformSymbolsToNodes(x).FirstOrDefault() ?? "")
                 .Where(x => !string.IsNullOrEmpty(x))

@@ -1,4 +1,4 @@
-﻿namespace DichotomicSearch.Application.Models;
+﻿namespace InspectaMorse.Application.Models;
 
 public class MorseCodeSymbols
 {

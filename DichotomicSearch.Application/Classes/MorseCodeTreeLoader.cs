@@ -1,10 +1,11 @@
-﻿using DichotomicSearch.Application.Models;
+﻿using InspectaMorse.Application;
+using InspectaMorse.Application.Models;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using YamlDotNet.Serialization;
 
-namespace DichotomicSearch.Application.Classes;
+namespace InspectaMorse.Application.Classes;
 public class NodeTreeBuilder
 {
     public static HashSet<Node> LoadFileFromRelativePath(string relativePath, FileType fileType)
@@ -15,7 +16,7 @@ public class NodeTreeBuilder
     private static HashSet<Node> LoadYamlFileFromRelativePath(string relativePath)
     {
         var fullFilePath = $"{GetBaseFilePath()}/{relativePath}.yaml";
-        
+
         string yamlString = File.ReadAllText(fullFilePath, Encoding.UTF8);
         var yamlDeserializer = new DeserializerBuilder().Build();
 

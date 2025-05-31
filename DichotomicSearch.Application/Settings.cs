@@ -1,4 +1,4 @@
-﻿namespace DichotomicSearch.Application;
+﻿namespace InspectaMorse.Application;
 public static class Settings
 {
     public const string ROOT_DIR_NAME = "dichotomic-search";

@@ -1,7 +1,7 @@
-﻿using DichotomicSearch.Application.Classes.Implementations.Abstract;
-using DichotomicSearch.Application.Models;
+﻿using InspectaMorse.Application.Classes.Implementations.Abstract;
+using InspectaMorse.Application.Models;
 
-namespace DichotomicSearch.Application.Classes.Implementations;
+namespace InspectaMorse.Application.Classes.Implementations;
 public class DirectiveTraversalService(ICollection<Node> treeNodes) : NodeTraversalSolver(treeNodes), INodeTraversalSolver
 {
     public string[] TransformSymbolsToNodes(string signals)
@@ -18,7 +18,7 @@ public class DirectiveTraversalService(ICollection<Node> treeNodes) : NodeTraver
             };
         }
 
-        return [ currentNode.Key! ];
+        return [currentNode.Key!];
     }
 
     public string TransformNodeToSymbol(string node) => BuildNodeSymbols(string.Empty, node);

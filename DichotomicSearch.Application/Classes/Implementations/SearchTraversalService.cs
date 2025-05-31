@@ -1,7 +1,7 @@
-﻿using DichotomicSearch.Application.Classes.Implementations.Abstract;
-using DichotomicSearch.Application.Models;
+﻿using InspectaMorse.Application.Classes.Implementations.Abstract;
+using InspectaMorse.Application.Models;
 
-namespace DichotomicSearch.Application.Classes.Implementations;
+namespace InspectaMorse.Application.Classes.Implementations;
 
 public class SearchTraversalService(ICollection<Node> treeNodes) : NodeTraversalSolver(treeNodes), INodeTraversalSolver
 {

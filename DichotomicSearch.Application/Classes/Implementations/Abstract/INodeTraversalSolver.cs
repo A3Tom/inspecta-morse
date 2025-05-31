@@ -1,4 +1,4 @@
-﻿namespace DichotomicSearch.Application.Classes.Implementations.Abstract;
+﻿namespace InspectaMorse.Application.Classes.Implementations.Abstract;
 public interface INodeTraversalSolver
 {
     string TransformNodeToSymbol(string node);
