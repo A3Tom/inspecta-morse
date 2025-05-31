@@ -1,0 +1,212 @@
+[
+    {
+        "Key": "",
+        "Left": "E",
+        "Right": "T"
+    },
+    {
+        "Key": "E",
+        "Left": "I",
+        "Right": "A"
+    },
+    {
+        "Key": "T",
+        "Left": "N",
+        "Right": "M"
+    },
+    {
+        "Key": "I",
+        "Left": "S",
+        "Right": "U"
+    },
+    {
+        "Key": "A",
+        "Left": "R",
+        "Right": "W"
+    },
+    {
+        "Key": "N",
+        "Left": "D",
+        "Right": "K"
+    },
+    {
+        "Key": "M",
+        "Left": "G",
+        "Right": "O"
+    },
+    {
+        "Key": "S",
+        "Left": "H",
+        "Right": "V"
+    },
+    {
+        "Key": "U",
+        "Left": "F",
+        "Right": "Ü"
+    },
+    {
+        "Key": "R",
+        "Left": "L",
+        "Right": "Ä"
+    },
+    {
+        "Key": "W",
+        "Left": "P",
+        "Right": "J"
+    },
+    {
+        "Key": "D",
+        "Left": "B",
+        "Right": "X"
+    },
+    {
+        "Key": "K",
+        "Left": "C",
+        "Right": "Y"
+    },
+    {
+        "Key": "G",
+        "Left": "Z",
+        "Right": "Q"
+    },
+    {
+        "Key": "O",
+        "Left": "Ö",
+        "Right": "CH"
+    },
+    {
+        "Key": "H",
+        "Left": "5",
+        "Right": "4"
+    },
+    {
+        "Key": "V",
+        "Left": "Ŝ",
+        "Right": "3"
+    },
+    {
+        "Key": "F",
+        "Left": "É",
+        "Right": "¿"
+    },
+    {
+        "Key": "Ü",
+        "Left": "Ð",
+        "Right": "2"
+    },
+    {
+        "Key": "L",
+        "Left": "AS",
+        "Right": "È"
+    },
+    {
+        "Key": "Ä",
+        "Left": "+",
+        "Right": ""
+    },
+    {
+        "Key": "P",
+        "Left": "Þ",
+        "Right": "À"
+    },
+    {
+        "Key": "J",
+        "Left": "Ĵ",
+        "Right": "1"
+    },
+    {
+        "Key": "B",
+        "Left": "6",
+        "Right": "="
+    },
+    {
+        "Key": "X",
+        "Left": "/",
+        "Right": ""
+    },
+    {
+        "Key": "C",
+        "Left": "Ç",
+        "Right": "KA"
+    },
+    {
+        "Key": "Y",
+        "Left": "(",
+        "Right": ""
+    },
+    {
+        "Key": "Z",
+        "Left": "7",
+        "Right": "Ž"
+    },
+    {
+        "Key": "Q",
+        "Left": "Ĝ",
+        "Right": "Ñ"
+    },
+    {
+        "Key": "Ö",
+        "Left": "8",
+        "Right": ""
+    },
+    {
+        "Key": "CH",
+        "Left": "9",
+        "Right": "0"
+    },
+    {
+        "Key": "Ŝ",
+        "Left": "",
+        "Right": "SK"
+    },
+    {
+        "Key": "Ð",
+        "Left": "?",
+        "Right": "_"
+    },
+    {
+        "Key": "È",
+        "Left": "\"",
+        "Right": ""
+    },
+    {
+        "Key": "+",
+        "Left": ".",
+        "Right": ""
+    },
+    {
+        "Key": "À",
+        "Left": "@",
+        "Right": ""
+    },
+    {
+        "Key": "1",
+        "Left": "'",
+        "Right": ""
+    },
+    {
+        "Key": "6",
+        "Left": "",
+        "Right": "-"
+    },
+    {
+        "Key": "KA",
+        "Left": ";",
+        "Right": "!"
+    },
+    {
+        "Key": "(",
+        "Left": "",
+        "Right": ")"
+    },
+    {
+        "Key": "Ž",
+        "Left": "Ź",
+        "Right": ","
+    },
+    {
+        "Key": "8",
+        "Left": ":",
+        "Right": ""
+    }
+]
