@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DichotomicSearch.Application\DichotomicSearch.Application.csproj" />
+    <ProjectReference Include="..\InspectaMorse.Application\InspectaMorse.Application.csproj" />
   </ItemGroup>
 
 </Project>
